@@ -25,6 +25,23 @@ Deployed using **GitHub Pages**
 - 🎨 Clean and modern UI  
 
 ---
+ Website Pages
+
+The portfolio consists of multiple sections/pages:
+
+- **Home + About**  
+  Introduction, brief background, and personal overview.
+
+- **Skills**  
+  Showcases technical skills, tools, and technologies with visual effects and animations.
+
+- **Projects**  
+  Displays selected projects with descriptions, features, and links.
+
+- **Contact**  
+  Contact details and/or contact form for collaboration and opportunities.
+
+---
 
 ## How to Open Locally
 ### Method 1: Simple Browser Open
