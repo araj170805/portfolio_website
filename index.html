@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Raj - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+    
+</head>
+<body>
+   
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    
+    <div class="background">
+        <div class="grid-container"></div>
+        <div class="code-rain" id="codeRain"></div>
+        <div class="particles" id="particles"></div>
+        <div id="floatingCode"></div>
+    </div>
+
+   
+    <div class="loading-screen" id="loadingScreen">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-btn red"></div>
+                <div class="terminal-btn yellow"></div>
+                <div class="terminal-btn green"></div>
+            </div>
+            <div class="terminal-content">
+                <div class="loading-line">$ wait...initializing portfolio system...</div>
+                <div class="loading-line">$ loading modules [████████████] 100%</div>
+                <div class="loading-line">$ compiling assets...</div>
+                <div class="loading-line">$ connecting to server...</div>
+                <div class="loading-line">$ verifying authentication...</div>
+                <div class="loading-line">✓ System ready. Launching portfolio...</div>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" data-page="home" class="nav-link active">Home</a>
+        <a href="#" data-page="about" class="nav-link">About</a>
+        <a href="#" data-page="skills" class="nav-link">Skills</a>
+        <a href="#" data-page="projects" class="nav-link">Projects</a>
+        <a href="#" data-page="contact" class="nav-link">Contact</a>
+        <button class="theme-toggle" id="themeToggle">
+            <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z"/>
+            </svg>
+            <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;">
+                <path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z"/>
+            </svg>
+        </button>
+    </nav>
+
+    
+    <button class="sound-toggle" id="soundToggle">
+        <svg id="soundOn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M5.88889 16H2C1.44772 16 1 15.5523 1 15V9C1 8.44772 1.44772 8 2 8H5.88889L11.1834 3.66821C11.3971 3.49335 11.7121 3.52485 11.887 3.73857C11.9601 3.8279 12 3.93977 12 4.05519V19.9448C12 20.221 11.7761 20.4448 11.5 20.4448C11.3846 20.4448 11.2727 20.4049 11.1834 20.3318L5.88889 16ZM23.0489 12C23.0489 16.0001 20.6984 19.4375 17.2931 21.0147L16.395 19.1954C19.2586 17.8901 21.0489 15.1355 21.0489 12C21.0489 8.86448 19.2586 6.10995 16.395 4.80455L17.2931 2.98535C20.6984 4.56246 23.0489 7.99989 23.0489 12ZM18.0001 12C18.0001 14.1217 16.7909 15.9504 15.0001 16.8999L14.0001 15.0002C15.1411 14.4082 16.0001 13.2948 16.0001 12C16.0001 10.7052 15.1411 9.59176 14.0001 8.99984L15.0001 7.1001C16.7909 8.04962 18.0001 9.87832 18.0001 12Z"/>
+        </svg>
+        <svg id="soundOff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;">
+            <path d="M5.88889 16H2C1.44772 16 1 15.5523 1 15V9C1 8.44772 1.44772 8 2 8H5.88889L11.1834 3.66821C11.3971 3.49335 11.7121 3.52485 11.887 3.73857C11.9601 3.8279 12 3.93977 12 4.05519V19.9448C12 20.221 11.7761 20.4448 11.5 20.4448C11.3846 20.4448 11.2727 20.4049 11.1834 20.3318L5.88889 16ZM20.4142 12L23.9497 15.5355L22.5355 16.9497L19 13.4142L15.4645 16.9497L14.0503 15.5355L17.5858 12L14.0503 8.46447L15.4645 7.05025L19 10.5858L22.5355 7.05025L23.9497 8.46447L20.4142 12Z"/>
+        </svg>
+    </button>
+
+    <!-- Copyright -->
+     <footer>
+    <div class="copyright">© 2026 All Rights Reserved. Designed with ❤️ by Ashish Raj</div>
+    </footer>   
+
+    <!-- Pages Container -->
+    <div class="pages-container">
+        <!-- Home Page -->
+        <div class="page home active" data-page="home">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+            <div class="hero-badge">👋 Welcome to my digital space</div>
+            <h1>
+                <span class="name-text">Ashish Raj</span>
+            </h1>
+            <div class="typing-container">
+                <span class="subtitle">I'm a  </span>
+                <span class="subtitle typewriter" id="typewriter"></span>
+            </div>
+            <p class="role-description">
+                Transforming ideas into elegant code. Crafting digital experiences that inspire, engage, and deliver results. Let's build something extraordinary together.
+            </p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary" data-page="projects">Explore My Work</a>
+                <a href="#" class="btn btn-secondary" data-page="contact">Let's Connect</a>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div class="page about" data-page="about">
+            <div class="about-container">
+                <div class="about-image">
+                    <div class="profile-image-wrapper">
+                        <img src="ashish.jpeg" alt="Ashish Raj" class="profile-image" id="profileImage">
+                        <div class="profile-placeholder" id="profilePlaceholder" style="display: none;">👤</div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <p>
+                        Hi! I'm Ashish Raj, a passionate Full Stack Developer with a love for creating beautiful, functional, and user-centered digital experiences. With expertise across the entire development spectrum, I bring ideas to life through clean code and innovative solutions.
+                    </p>
+                    <p>
+                        My journey in technology has been driven by curiosity and a commitment to continuous learning. I specialize in modern web technologies, cloud architecture, and creating seamless user experiences that make a difference.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Done</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Page -->
+        <div class="page skills" data-page="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <span class="skill-icon">⚡</span>
+                    <h3>Frontend Development</h3>
+                    <p>Modern frameworks and libraries including html, css, and javascript with a focus on performance and user experience.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🔧</span>
+                    <h3>Backend Engineering</h3>
+                    <p>Scalable server architectures using fastapi, Python, and cloud services with expertise in API design.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🎨</span>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating beautiful, intuitive interfaces with modern design principles and animation techniques.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">📱</span>
+                    <h3>Mobile Development</h3>
+                    <p>Cross-platform mobile applications using React Native and progressive web technologies.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">☁️</span>
+                    <h3>Cloud & DevOps</h3>
+                    <p>AWS, Azure, Docker, and CI/CD pipelines for seamless deployment and infrastructure management.</p>
+                </div>
+                <div class="skill-card">
+                    <span class="skill-icon">🤖</span>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Integrating intelligent features using modern ML frameworks and AI APIs for enhanced user experiences.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Page -->
+        <div class="page projects" data-page="projects">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A modern, high-performance e-commerce solution with real-time inventory, payment integration, and advanced analytics.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Stripe</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+                <div class="project-card">
+                    <h3>AI Content Generator</h3>
+                    <p>Intelligent content creation tool powered by advanced AI models for marketing and creative writing.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tailwind</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Real-Time Analytics Dashboard</h3>
+                    <p>Enterprise-grade dashboard for visualizing complex data streams with customizable widgets and exports.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div class="page contact" data-page="contact">
+            <h2>Let's Connect</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" required placeholder=" "></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+                <div class="form-message" id="formMessage"></div>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>
